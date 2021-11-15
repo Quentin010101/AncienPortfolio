@@ -1,0 +1,196 @@
+:root{
+    --animationProjetTime: 0.8s;
+    --ease: linear;
+}
+#section-projet{
+    background: var(--col-black);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-projet{
+    height: 80%;
+    width: 100%;
+    position: relative;
+}
+
+.projet{
+    position: absolute;
+    width: 45%;
+    aspect-ratio: 2/1.5;
+    display: flex;
+    /* background-color: rgba(255, 255, 255);   */
+    box-shadow: 0.1em 0.1em 0.1em rgba(5, 5, 5, 0.6);
+    border-radius: 0 10px 10px 0;
+}
+.projet-position1{
+    left: 20%;
+    top: 50%;
+    z-index: 2;
+    transform:  translate(-50%,-50%) scale(0.7);
+    opacity: 0.1;
+    cursor: pointer;
+    transition: all var(--animationProjetTime) var(--ease);
+}
+.projet-position2{
+    left: 50%;
+    top: 50%;
+    z-index: 3;
+    transform: translate(-50%,-50%);
+    transition: all var(--animationProjetTime) var(--ease);
+}
+.projet-position3{
+    left: 80%;
+    top: 50%;
+    z-index: 1;
+    transform: translate(-50%,-50%) scale(0.7);
+    opacity: 0.1;
+    cursor: pointer;
+    transition: all var(--animationProjetTime) var(--ease);
+}
+.retrecirPosition{
+    animation: sca var(--animationProjetTime) var(--ease);
+}
+/* --------------- Card-------------------- */
+.container-visible{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    font-family: var(--font2);
+    color: rgb(255, 255, 255);
+    background: rgba(28, 67, 238,0.95);
+    gap: 3%;
+    box-shadow: 0.25em 0em 0.2em rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.container-visible p{
+    font-family: var(--font1);
+    padding: 0 10%;
+    font-size: max(0.8vw, 10px);
+}
+.container-visible h2{
+    font-family: var(--font2);
+    font-weight: 300;
+    color: var(--col-white);
+    font-size: max(1.5vw, 14px);
+}
+.container-visible h3{
+    font-family: var(--font2);
+    color: var(--col-secondaire-2);
+    font-size: max(1vw, 15px);
+}
+.container-invisibleOuvert{
+    width: 70%;
+    height: 100%;
+    background: rgba(28, 67, 238,0.95);
+    z-index: 1;
+    border-radius: 0 10px 10px 0;
+    transition: all 0.5s;
+}
+.container-invisibleFerme{
+    width: 0%;
+    height: 100%;
+    background: rgba(28, 67, 238,0.95);
+    z-index: 1;
+    border-radius: 0 10px 10px 0;
+    transition: all 0.5s;
+}
+.projet a{
+    border: none;
+    padding: 0.5em 0.75em;
+    background-color: rgba(11, 139, 54, 0.8);
+    margin-top: 20%;
+    font-family: var(--font1);
+    color: var(--col-White);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.projet a:hover{
+    background-color: rgba(11, 139, 54, 1);
+    transition: all 0.5s;
+}
+
+.projetBackground{
+    position: absolute;
+    inset: 0;
+    mask-image: url('../asset/mask-image\(1\).png');
+    -webkit-mask-image: url('../asset/mask-image\(1\).png');
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    z-index: 0;
+}
+.projet1Background{
+    background-image: url('../asset/Screenshot\ 2021-11-07\ at\ 18-58-25\ Document.png');
+    background-size: 100% 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.projet2Background{
+    background-image: url('../asset/Projet2.JPG');
+    background-size: 140% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.projet3Background{
+    background-image: url('../asset/CaptureProjet3.PNG');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+@keyframes sca{
+    0%{
+        transform: translate(-50%,-50%) scale(0.7);
+    }
+    50%{
+        transform:translate(-50%,-50%) scale(0.5);
+    }
+    100%{
+        transform:translate(-50%,-50%) scale(0.7);
+    }
+}
+@media (max-width: 1300px){
+    .projet{
+        width: 75%;
+    }
+    .projet-position1{
+        left: 30%;
+        top: 50%;
+    }
+    .projet-position2{
+        left: 50%;
+        top: 50%;
+    }
+    .projet-position3{
+        left: 70%;
+        top: 50%;
+    }  
+}
+@media (max-width: 800px){
+    .projet{
+        width: 72%;
+    }
+    .projet-position1{
+        left: 50%;
+        top: 20%;
+    }
+    .projet-position2{
+        left: 50%;
+        top: 50%;
+    }
+    .projet-position3{
+        left: 50%;
+        top: 80%;
+    }  
+}
+@media (max-width: 600px){
+    .projet{
+        width: 95%;
+    }
+    
+}
