@@ -6,7 +6,6 @@ const projet3 = document.querySelector('.container-projet > div:nth-child(3)')
 const root = document.querySelector(':root')
 
 let animationTime = getComputedStyle(root).getPropertyValue("--animationProjetTime")
-console.log(animationTime)
 let time = (animationTime.substring(0, animationTime.length - 1)) * 1000
 
 let arrProjet = [projet1, projet2, projet3]
